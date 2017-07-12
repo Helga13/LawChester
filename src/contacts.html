@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<title>Contacts</title>
+//= includes/head.html
+<body>
+//= includes/header.html
+//= includes/services.html
+<section class="content">
+<div class="wrap">
+	//= includes/aside.html
+	<div class="content_page">
+		<div class="content_page_inner">
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li class="last">Контакты</li>
+			</ul>
+			<div class="page_title">Контакты</div>
+				<div class="contact_block">
+					<div class="contact_item">
+						<div class="heading">Контактные телефоны:</div>
+						<div class="contact_info">+375 (29) 221-11-21</div>
+					</div>
+					<div class="contact_item">
+						<div class="heading">Режим работы:</div>
+						<div class="contact_info">Пн. - Пт., 9:00 - 18:00</div>
+					</div>
+					<div class="contact_item">
+						<div class="heading">Адрес:</div>
+						<div class="contact_info">г. Минск, ул. Я. Мавра, 41</div>
+					</div>
+				</div>
+				<div id="map">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acb05d33c685f8e6fb08e7f149f6f259a9adfeba7cd44cd9373e80c476dbcb7cc&amp;width=100%&amp;height=300&amp;lang=ru_RU&amp;scroll=false"></script>
+				</div>
+				<div class="contact_form">
+					<form action="#" method="post">
+						<div class="h2">Форма обратной связи</div>
+						<div class="field">
+							<label for="name">Ваше имя</label>
+							<input id="name" name="name" type="text">
+						</div>
+						<div class="field tabs">
+							<div class="label">Выберите удобный способ связи:</div>
+							<div class="tabs_caption">
+								<div class="tab_radio active"><label for="phone" class="tab"><span></span>телефон</label></div>
+					  		<div class="tab_radio"><label for="mail" class="tab"><span></span>электронная почта</label></div>
+              </div>
+							<div class="tabs_content active">
+								<input class="tab_content active" id="phone" name="phone" type="text" placeholder="+375 (__) ___ __ __">
+							</div>
+				 			<div class="tabs_content">
+				 				<input class="tab_content" id="mail" name="mail" type="text">
+							</div>
+						</div>
+						<div class="field mod">
+							<label for="message">Интересующий вопрос</label>
+							<textarea id="message" name="message" placeholder="Место для текста..."></textarea>
+						</div>
+						<div class="field">
+							<button type="submit">Начать общение</button>
+						</div>
+					</form>
+				</div>
+		</div>
+	</div>
+</div>
+</section>
+//= includes/footer.html
+//= includes/scripts.html
+</body>
+</html>
