@@ -207,38 +207,42 @@ header{
 	li{
 		display: inline-block;
 	}
-	.nav_link{
-		@include font-size(1.8);
-		padding: 0 12px;
-		opacity: .6;
-		transition: opacity .3s ease-in-out;
-		span{
-			position: relative;
-			&:after{
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 32px;
-				height: 2px;
-				width: 100%;
-				background-color: #da0000;
-				transform: scale3d(0, 1, 1);
-				transform-origin: center;
-				transition: transform .3s ease-in-out;
-			}
-		}
-		&:hover{
-			opacity: 1;
-			span:after{
-				transform: scale3d(1, 1, 1);
-			}
-		}
-	}
 	.phone{
 		@include font-size(1.8);
 		font-family: 'pt_sans-web-bold', $font-stack-helvetica;
 		padding: 0 10px;
 		float: right;
+	}
+	.main_menu{
+		padding: 0;
+		li{
+			padding: 4px 12px 7px;
+		}
+		a{
+			@include font-size(1.8);
+			opacity: .6;
+			display: inline-block;
+			position: relative;
+			transition: opacity .3s ease-in-out;
+				&:after{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 29px;
+					height: 2px;
+					width: 100%;
+					background-color: #da0000;
+					transform: scale3d(0, 1, 1);
+					transform-origin: center;
+					transition: transform .3s ease-in-out;
+				}
+			&:hover{
+				opacity: 1;
+				&:after{
+					transform: scale3d(1, 1, 1);
+				}
+			}
+		}
 	}
 }
 
@@ -267,7 +271,8 @@ footer{
 		@include font-size(2.0);
 		@include line-height(2.4);
 	}
-	.text{
+	.text,
+	p{
 		color: #ddd;
 		@include font-size(1.6);
 		@include line-height(1.8);
@@ -409,7 +414,9 @@ footer{
 	li{
 		display: inline-block;
 	}
-	a{
+	a,
+	.page-numbers,
+	.current{
 		font-family: 'pt_sans-web-bold', $font-stack-helvetica;
 		@include font-size(1.4);
 		@include line-height(2.0);
@@ -418,13 +425,20 @@ footer{
 		height: 20px;
 		text-align: center;
 		border-radius: 50%;
+		transition: background-color .3s ease-in-out, color .3s ease-in-out;
 		&:hover,
 		&.active{
 			background-color: #eee;
 			color: #333;
 		}
 	}
-	.pag{
+	.current{
+		background-color: #eee;
+		color: #333;
+	}
+	.pag,
+	.prev,
+	.next{
 		font-family: 'ebgaramond-regular', $font-stack-helvetica;
 		@include font-size(1.8);
 		position: relative;
@@ -451,6 +465,7 @@ footer{
 .services{
 	font-size: 0;
 	padding: 10px 0;
+	text-align: center;
 }
 
 .service_item{
@@ -568,12 +583,12 @@ time{
 	box-shadow: 1px 1px 0px 0px rgba(51,51,51,.2), 2px 2px 0px 0px rgba(51,51,51,.1);
 	img{
 		width: 100%;
-		min-height: 100%;
-		object-fit: cover;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
+//		min-height: 100%;
+//		object-fit: cover;
+//		position: absolute;
+//		top: 50%;
+//		left: 50%;
+//		transform: translate(-50%,-50%);
 	}
 	&:after{
 		content: '';
@@ -702,6 +717,7 @@ time{
 		vertical-align: top;
 		img{
 			width: 100%;
+			height: auto;
 		}
 		&.serv{
 			box-shadow: none;

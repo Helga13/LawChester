@@ -60,4 +60,6 @@ $(document).ready(function () {
 		e.stopPropagation();
 	}); 
 	
+	$('.footer_item .rpwe-block h3 a').text('Читать далее')
+	
 })

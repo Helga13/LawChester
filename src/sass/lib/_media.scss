@@ -1,14 +1,14 @@
-@media only screen and (max-width : 1600px) {
-
-}
-
-
-@media only screen and (max-width : 1366px) {
-
-}
-
-@media only screen and (max-width : 1279px) {
-
+@media only screen and (max-width : 1030px) {
+ 
+	header{
+		.logo,
+		nav,
+		.phone{
+			width: 100%;
+      text-align: center;
+      padding: 0 10px;
+		}
+	}
 }
 
 @media only screen and (max-width : 1023px) {
@@ -17,14 +17,89 @@
 
 @media only screen and (max-width : 992px) {
 
+	.service_item,
+	.footer_item{
+		width: 50%;
+	}	
+	
+	aside{
+		width: 100%;
+		float: none;
+		.aside_item{
+			@include clearfix;
+			
+		}
+		.aside_img{
+			width: 300px;
+			float: left;
+			margin-right: 10px;
+		}
+	}
+	.content_page{
+		width: 100%;
+	}
+	
 }
 
 @media only screen and (max-width : 767px) {
+	.footer_bottom .copy,
+	.footer_bottom .skyweb{
+		width: 100%;
+		text-align: center;
+	}
+	.contact_block{
+		text-align: center;
+	}
+	.contact_item{
+		width: 50%;
+	}
+	.contact_item .contact_info{
+		text-align: left;
+	}
+	
+}
 
+@media only screen and (max-width : 600px) {
+	.img_news{
+		max-width: 300px;
+	}
+	.contact_item,
+	.field{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width : 480px) {
-
+	
+	.footer_item, 
+	.service_item{
+		width: 100%;
+	}
+	aside .aside_img{
+		width: 100%;
+		margin-right: 0;
+		float: none;
+	}
+	.img_block.img_news{
+		max-width: 100%;
+		width: 100%;
+		margin-right: 0;
+	}
+	.article_item .article_text{
+		width: 100%;
+		padding-left: 0;
+	}
+	.article_item .article_img{
+		margin-bottom: 10px;
+	}
+	.field,
+	button, 
+	input, 
+	textarea,
+	.field button{
+		min-width: 200px;
+	}
+	
 }
 
 @media only screen and (max-width : 320px) {
